@@ -34,6 +34,7 @@ public class RestTemplateTest {
 
     @Test(dependsOnMethods = {"checkResponseHeader"})
     public void checkResponseBody() {
-        Assert.assertEquals(responseEntity.getBody().length, 10);
+        int responseBodyContent = responseEntity.getBody().length;
+        Assert.assertEquals(responseBodyContent, 10);
     }
 }
